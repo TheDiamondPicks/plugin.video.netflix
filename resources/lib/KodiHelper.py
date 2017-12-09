@@ -571,6 +571,7 @@ class KodiHelper(object):
         xbmcplugin.addSortMethod(
             handle=self.plugin_handle,
             sortMethod=xbmcplugin.SORT_METHOD_UNSORTED)
+        xbmc.executebuiltin('Container.SetViewMode(516)')
         xbmcplugin.endOfDirectory(self.plugin_handle)
 
         # (re)select the previously selected main menu entry
@@ -681,6 +682,7 @@ class KodiHelper(object):
         xbmcplugin.addSortMethod(
             handle=self.plugin_handle,
             sortMethod=xbmcplugin.SORT_METHOD_LASTPLAYED)
+        xbmc.executebuiltin('Container.SetViewMode(512)')
         xbmcplugin.endOfDirectory(self.plugin_handle)
         self.set_custom_view(view)
         return True
@@ -909,6 +911,7 @@ class KodiHelper(object):
         xbmcplugin.addSortMethod(
             handle=self.plugin_handle,
             sortMethod=xbmcplugin.SORT_METHOD_LABEL)
+        xbmc.executebuiltin('Container.SetViewMode(512)')
         xbmcplugin.endOfDirectory(self.plugin_handle)
         self.set_custom_view(VIEW_FOLDER)
         return True
@@ -965,6 +968,7 @@ class KodiHelper(object):
         xbmcplugin.addSortMethod(
             handle=self.plugin_handle,
             sortMethod=xbmcplugin.SORT_METHOD_TITLE)
+        xbmc.executebuiltin('Container.SetViewMode(512)')
         xbmcplugin.endOfDirectory(self.plugin_handle)
         self.set_custom_view(VIEW_SEASON)
         return True
@@ -1031,6 +1035,7 @@ class KodiHelper(object):
             handle=self.plugin_handle,
             sortMethod=xbmcplugin.SORT_METHOD_DURATION)
         xbmcplugin.endOfDirectory(self.plugin_handle)
+        xbmc.executebuiltin('Container.SetViewMode(515)')
         self.set_custom_view(VIEW_EPISODE)
         return True
 
